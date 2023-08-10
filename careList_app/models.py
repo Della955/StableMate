@@ -6,4 +6,4 @@ class CareList (models.Model):
     supplements = models.CharField()
     turnout = models.BooleanField(default=True)
     farrier = models.DateField()
-    horse_id = models.OneToOneField(Horse, related_name='care_list_id', on_delete=models.CASCADE)
+    horse_id = models.OneToOneField(Horse, related_name='care_list', on_delete=models.CASCADE)

@@ -5,5 +5,5 @@ from careList_app.serializers import CareListSerializer
 class HorseSerializer(serializers.ModelSerializer):
     care_list = CareListSerializer() 
     class Meta:
-        models = Horse 
+        model = Horse 
         fields = ['id', 'name', 'age', 'care_list']

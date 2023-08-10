@@ -4,5 +4,5 @@ from .models import CareList
 class CareListSerializer(serializers.ModelSerializer):
 
     class Meta:
-        models = CareList
+        model = CareList
         fields = ['id', 'feed_type', 'supplements', 'turnout', 'farrier']

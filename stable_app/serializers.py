@@ -4,8 +4,7 @@ from .models import Stable
 
 class StableSerializer(serializers.ModelSerializer):
     horses = HorseSerializer(many=True)
-
     class Meta:
         model = Stable
-        fields = ['id', 'horses', 'name']
+        fields = ['id', 'name', 'horses']
 
