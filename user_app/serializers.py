@@ -4,7 +4,7 @@ from stable_app.serializers import StableSerializer
 from list_app.serializer import ListSerializer
 
 class UserSerializer(serializers.ModelSerializer):
-    stable = StableSerializer(many=False)
+    stable = StableSerializer(many=True)
     list = ListSerializer(many=True)
 
     class Meta:

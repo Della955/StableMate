@@ -22,7 +22,8 @@ urlpatterns = [
     path('api/v1/noun/', include("api_app.urls")),
     path('api/v1/user/', include("user_app.urls")), 
     path('api/v1/list/', include("list_app.urls")),
+    path('api/v1/list/', include("task_app.urls")),
     path('api/v1/stable/', include("stable_app.urls")), 
-    # path('api/v1/stable/horse/', include("horse_app.urls")),
-    # path('api/v1/stable/horse/carelist/', include("careList_app.urls")), 
+    path('api/v1/stable/', include("horse_app.urls")),
+    path('api/v1/stable/', include("careList_app.urls")), 
 ]

@@ -6,5 +6,5 @@ class StableSerializer(serializers.ModelSerializer):
     horses = HorseSerializer(many=True)
     class Meta:
         model = Stable
-        fields = ['id', 'name', 'horses']
+        fields = ['id', 'user', 'name', 'horses']
 
