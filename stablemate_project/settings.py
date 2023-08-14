@@ -16,6 +16,7 @@ from dotenv import dotenv_values
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = dotenv_values(".env")
+env.get("noun_project_key")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -44,7 +45,8 @@ INSTALLED_APPS = [
     'task_app',
     'stable_app',
     'horse_app',
-    'careList_app'
+    'careList_app',
+    'api_app'
 ]
 
 MIDDLEWARE = [

@@ -4,11 +4,11 @@ from stable_app.serializers import StableSerializer
 from list_app.serializer import ListSerializer
 
 class UserSerializer(serializers.ModelSerializer):
-    stable_id = StableSerializer()
+    stable = StableSerializer(many=True)
     list = ListSerializer(many=True)
 
     class Meta:
         model = User
-        fields = ['id', 'email', 'stable_id', 'lists']
+        fields = ['id', 'email', 'stable', 'lists']
 
     
