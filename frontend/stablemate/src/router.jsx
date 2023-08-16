@@ -4,6 +4,7 @@ import { HomePage } from "./components/HomePage.jsx";
 import { RegisterPage } from "./components/RegisterPage.jsx";
 import { LoginPage } from "./components/LoginPage.jsx"; 
 import { ListPage } from "./components/ListPage.jsx";
+import { ListIdPage } from "./components/ListIdPage.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path:"list",
         element:<ListPage />
+      },
+      {
+        path:"list/:list_id",
+        element: <ListIdPage />
       }
     ],
   },
