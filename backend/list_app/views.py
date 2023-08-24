@@ -16,7 +16,7 @@ from rest_framework.permissions import IsAuthenticated
 class All_list(tokenAuth):
   
     def get(self, request):
-        lists = ListSerializer(List.objects.all(), many=True)
+        lists = ListSerializer(List.objects.filter(user=request.user), many=True)
         return Response(lists.data, status=HTTP_200_OK)
     
     def post(self, request):
@@ -29,12 +29,12 @@ class All_list(tokenAuth):
 class Select_list(tokenAuth):
 
     def get(self, request, list_id):
-        get_list = get_object_or_404(List, id=list_id)
+        get_list = get_object_or_404(List, id=list_id, user=request.user)
         get_list = ListSerializer(get_list)
         return Response(get_list.data, status=HTTP_200_OK)
     
     def delete(self, request, list_id):
-        get_list = get_object_or_404(List, id=list_id)
+        get_list = get_object_or_404(List, id=list_id, user=request.user)
         get_list.delete()
         return Response(status=HTTP_204_NO_CONTENT)
 

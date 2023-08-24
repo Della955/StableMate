@@ -1,0 +1,53 @@
+.all_horses {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.horse_icon {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border: 2px solid rgb(197, 237, 172); 
+    height: 200px;
+    width: 200px; 
+    border-radius: 25px;
+    margin:10px;
+    position: relative;
+
+}
+
+
+
+.horse_name {
+    
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+.add_horse {
+    display: flex;
+    margin: auto;
+    color:black;
+}
+
+.horse_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.form_info {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    align-items: center;
+    border: 2px solid rgb(197, 237, 172);
+    border-radius: 25px;
+    width: 300px;
+    padding: 10px;
+}

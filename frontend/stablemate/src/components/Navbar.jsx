@@ -1,13 +1,12 @@
-
+import { Link } from "react-router-dom"; 
 export default function Navbar() {
     return (
         <>
         <nav>
             <h1>Stablemate</h1>
-            <h3>Home</h3>
-            <h3>Register</h3>
-            <h3>Sign-in</h3>
-            <h3>Sign-out</h3>
+            <h3><Link to="/home">Home</Link></h3>
+            <h3><Link to="/list">List</Link></h3>
+            <h3><Link to="/horse">Horse</Link></h3>
         </nav>
         </>
     )

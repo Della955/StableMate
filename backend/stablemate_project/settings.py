@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'stable_app',
     'horse_app',
     'careList_app',
-    'api_app'
+    'api_app',
+    'calendar_app'
 ]
 
 MIDDLEWARE = [

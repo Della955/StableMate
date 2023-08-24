@@ -48,7 +48,7 @@ class Log_out(tokenAuth):
 class Info(tokenAuth):
     def get(self, request):
         try:
-            return Response({"username": request.user.email})
+            return Response({"username": request.user.email, "id" :request.user.id})
         except:
             return Response("No user matching credentials", status=HTTP_404_NOT_FOUND)
 

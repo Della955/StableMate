@@ -2,14 +2,16 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: white;
+  background-color: rgb(122, 145, 141);
 }
-
+a{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+  padding: 5px;
+}
 nav {
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,7 +21,18 @@ nav {
 }
 
 h1 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+h3 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  border: 1px solid white; 
+  padding: 10px;
+  border-radius:  25px;
+}
+
+h3:hover {
+  background-color: rgb(197, 237, 172) ;
+}

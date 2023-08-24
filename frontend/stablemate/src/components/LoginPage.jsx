@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { userContext } from "../App";
 import { api } from "../utilities";
 import { useNavigate } from "react-router-dom";
-
+import "./login.css"; 
 
 export const LoginPage = () => {
     const [userName, setUserName] = useState("");
@@ -19,7 +19,7 @@ export const LoginPage = () => {
         .catch((err) =>{
           alert("Incorrect credentials")
         })
-        console.log(response)
+   
         let user = response.data.user 
         let token = response.data.token 
         
@@ -28,13 +28,14 @@ export const LoginPage = () => {
         setUser(user)
         navigate("/home")
 
-        console.log("EMAIL: ", response.data.user)
       }
 
       return (
+        <div className="allItems">
+        <main className="main"> 
+        <div className="logo_image">
+        </div>
         <form onSubmit={(e) => login(e)}>
-          <h3>Welcome to Stablemate</h3>
-          <h5>Log In</h5>
           <input
             type="email"
             placeholder="email"
@@ -50,6 +51,9 @@ export const LoginPage = () => {
           />
           <input type="submit" />
         </form>
+        <footer></footer>
+        </main>
+        </div>
       );
     };
     
