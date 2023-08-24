@@ -1,4 +1,4 @@
-#app form{
+/* #app form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,9 +10,94 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+
+  }
+  a {
+    text-decoration: none;
   }
 
   nav{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+  } */
+
+  h1 {
+    text-align: center;
   }
+
+  h3{
+    text-align: center;
+
+  }
+
+nav {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #93b1a7;
+  border: 3px solid rgb(153, 194, 162); 
+  
+}
+
+a {
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.app {
+ 
+  background-color: rgb(122, 145, 141);
+}
+
+img {
+  height: 100px; 
+  width: 100px;
+}
+
+.home_logo_image {
+  background-image: url('output-onlinepngtools.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 200px;
+  width:200px;
+  padding-left: 200px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius:  25px;
+  box-shadow: 5px 5px 10px rgb(122, 145, 141);
+}
+
+.task_icon {
+  font-size: 70px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.stable_icon {
+  font-size: 70px;
+  color:black;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+
+.calendar_icon {
+  font-size: 70px;
+  color:black;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+button {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  border: 1px solid white; 
+  padding: 10px;
+  border-radius:  25px;;
+}

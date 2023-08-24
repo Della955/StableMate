@@ -1,0 +1,32 @@
+.list_of_list
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 20px; 
+    padding: 20px;
+
+}
+
+a {
+    padding: 10px; 
+}
+
+a:hover {
+    color:black;
+}
+
+button:hover {
+    background-color:rgb(197, 237, 172); 
+}
+
+.task {
+    padding: 10px; 
+    margin: 10px;
+    display: grid; 
+    grid-template-rows: 50px 50px;
+    align-items: center;
+    border: 2px solid rgb(197, 237, 172)
+}
+
