@@ -26,4 +26,5 @@ urlpatterns = [
     path('api/v1/stable/', include("stable_app.urls")), 
     path('api/v1/stable/', include("horse_app.urls")),
     path('api/v1/stable/', include("careList_app.urls")), 
+    path('api/v1/calendar/', include("calendar_app.urls"))
 ]

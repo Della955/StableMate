@@ -26,11 +26,16 @@ class All_horses(tokenAuth):
             return Response("Invalid stable id.", status=HTTP_404_NOT_FOUND)
     
     def post(self, request, stable_id):
-            stable = get_object_or_404(Stable, id=stable_id)
+            stable = Stable.objects.filter(id=request.user.id)
+            print("STABLE: ", stable[0])
             # add_horse = Horse(**request.data, stable_id = stable)
-            add_horse = Horse.objects.create(**request.data, stable_id = stable)
-            care_list = CareList.objects.create(horse_id=add_horse)
-
+            add_horse = Horse(**request.data, stable_id = stable[0])
+            add_horse.full_clean()
+            add_horse.save()
+            print("HORSE: " , add_horse)
+            care_list = CareList(horse_id=add_horse)
+            care_list.full_clean()
+            care_list.save()
             serialized_horse = HorseSerializer(add_horse)
 
             return Response(serialized_horse.data, status=HTTP_200_OK)

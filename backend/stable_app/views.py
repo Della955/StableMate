@@ -16,7 +16,7 @@ class View_stable(tokenAuth):
     #get the stable name 
     def get(self, request):
         try:
-            stable = StableSerializer(Stable.objects.all(), many=True) 
+            stable = StableSerializer(Stable.objects.filter(user=request.user), many=True) 
             return Response(stable.data, status=HTTP_200_OK)
         except:
             return Response("Stable not found.", status=HTTP_404_NOT_FOUND)
